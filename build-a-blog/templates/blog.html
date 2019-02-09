@@ -2,10 +2,10 @@
 
 {% block content %}
 
-<ul>
-    {% for blog in blogs %}
-    <li>{{blog.title}} <br> {{blog.body}}</li>
-    {% endfor %}
-</ul>
+    <ul style="list-style: none;" id="allblogs">
+        {% for blog in blogs %}
+        <li><a href = "/blogwebpage?id={{ blog.id }}">{{blog.title}}</a> <br> {{blog.body}}</li> <hr>
+        {% endfor %}
+    </ul>
 
 {% endblock %}
